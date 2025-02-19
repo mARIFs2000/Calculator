@@ -5,7 +5,7 @@ class Calculator(tk.Tk):
         super().__init__()
         self.title('Calculator')
         self.geometry('340x415')
-        self.configure(bg="midnight blue")
+        self.configure(bg="#6A5ACD")
         
         self.equation = ""
         self.create_widgets()
@@ -17,14 +17,14 @@ class Calculator(tk.Tk):
         # Button layout
         buttons = [
             ('AC   ',10, 100, self.clear), ('()  ', 90, 100, lambda: self.show('()')), ('%  ', 170, 100, lambda: self.show('%')), ('/  ', 250, 100, lambda: self.show('/')),
-            ('7  ', 10, 160, lambda: self.show('7')), ('8  ', 90, 160, lambda: self.show('8')), ('9  ', 170, 160, lambda: self.show('9')), ('X  ', 250, 160, lambda: self.show('*')),
+            ('7  ', 10, 160, lambda: self.show('7')), ('8  ', 90, 160, lambda: self.show('8')), ('9  ', 170, 160, lambda: self.show('9')), ('x  ', 250, 160, lambda: self.show('*')),
             ('4  ', 10, 220, lambda: self.show('4')), ('5  ', 90, 220, lambda: self.show('5')), ('6  ', 170, 220, lambda: self.show('6')), ('-  ', 250, 220, lambda: self.show('-')),
             ('1  ', 10, 280, lambda: self.show('1')), ('2  ', 90, 280, lambda: self.show('2')), ('3  ', 170, 280, lambda: self.show('3')), ('+  ', 250, 280, lambda: self.show('+')),
             ('0  ', 10, 340, lambda: self.show('0')), ('()  ', 90, 340, lambda: self.clear()), ('.   ', 170, 340, lambda: self.show('.')), ('=  ', 250, 340, self.calculate)
         ]
 
         for text, x, y, command in buttons:
-            button = tk.Button(self, text=text, width=5, height=1, font=('arial', 30), bd=5, fg="white", bg='steel blue', command=command)
+            button = tk.Button(self, text=text, width=5, height=1, font=('arial', 30), bd=5, fg="orange", bg='black', command=command)
             button.place(x=x, y=y)
 
     def show(self, value):
