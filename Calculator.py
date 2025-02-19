@@ -14,7 +14,6 @@ class Calculator(tk.Tk):
         self.lab_result = tk.Label(self, width=14, height=2, text="", font=('arial', 30), fg='white', bg='MediumOrchid4')
         self.lab_result.place(x=0, y=0)
 
-        # Button layout
         buttons = [
             ('AC   ',10, 100, self.clear), ('()  ', 90, 100, lambda: self.show('()')), ('%  ', 170, 100, lambda: self.show('%')), ('/  ', 250, 100, lambda: self.show('/')),
             ('7  ', 10, 160, lambda: self.show('7')), ('8  ', 90, 160, lambda: self.show('8')), ('9  ', 170, 160, lambda: self.show('9')), ('x  ', 250, 160, lambda: self.show('*')),
